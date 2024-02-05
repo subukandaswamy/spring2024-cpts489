@@ -20,3 +20,16 @@ function validateEmail() {
   }
   return valid;
 }
+
+function validateEmail1(email) {
+  //console.log(email);
+  const valid = email.includes("@");
+  if (!valid) {
+    //alert("invalid email!");
+    //appendAlert("Invalid email!", "danger");
+    console.log("invalid emai!");
+  }
+  return valid;
+}
+
+validateEmail1("subu@dsaa.com");
