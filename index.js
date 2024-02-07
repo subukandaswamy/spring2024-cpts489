@@ -1,35 +1,28 @@
-function appendAlert(message, type) {
-  const alertPlaceholder = document.getElementById("liveAlertPlaceholder");
-  const wrapper = document.createElement("div");
-  wrapper.innerHTML = [
-    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-    `   <div>${message}</div>`,
-    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-    "</div>",
-  ].join("");
-  alertPlaceholder.append(wrapper);
-}
+let a = 10;
+let b = 10.6;
+let bi = 10987890910n;
+let c = "cpts489";
+let d = false;
+let e = null;
+//let f;
+let g = Symbol("eecs");
 
-function validateEmail() {
-  const email = document.getElementById("email").value;
-  //console.log(email);
-  const valid = email.includes("@");
-  if (!valid) {
-    //alert("invalid email!");
-    appendAlert("Invalid email!", "danger");
-  }
-  return valid;
-}
+console.log(g);
 
-function validateEmail1(email) {
-  //console.log(email);
-  const valid = email.includes("@");
-  if (!valid) {
-    //alert("invalid email!");
-    //appendAlert("Invalid email!", "danger");
-    console.log("invalid emai!");
-  }
-  return valid;
-}
+let o = {
+  name: "Tim",
+  dept: "eecs",
+};
 
-validateEmail1("subu@dsaa.com");
+let arr = [1, 2, 3];
+
+console.log(o);
+console.log(arr);
+
+// function add(x, y) {
+//   return x + y;
+// }
+
+let add = function (x, y) {
+  return x + y;
+};
