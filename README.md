@@ -17,3 +17,11 @@ Demo code from CPTS 489 - Spring 2024
 ## Feb 14
 
 - [x] a quick tour of ECMA specification (covered a bit on Feb 9th)
+
+## Feb 21
+- [ ] Object creation
+- [ ] Prototypal inheritance
+  - [ ] get not set
+  - [ ] short-circuiting
+  - [ ] property access using short-circuiting
+  - [ ] conditional access operator
