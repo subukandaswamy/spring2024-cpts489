@@ -25,3 +25,4 @@ Demo code from CPTS 489 - Spring 2024
   - [ ] short-circuiting
   - [ ] property access using short-circuiting
   - [ ] conditional access operator
+- [ ] Arrays and functions are also objects
