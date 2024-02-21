@@ -19,10 +19,12 @@ Demo code from CPTS 489 - Spring 2024
 - [x] a quick tour of ECMA specification (covered a bit on Feb 9th)
 
 ## Feb 21
-- [ ] Object creation
-- [ ] Prototypal inheritance
-  - [ ] get not set
-  - [ ] short-circuiting
-  - [ ] property access using short-circuiting
-  - [ ] conditional access operator
-- [ ] Arrays and functions are also objects
+
+- [x] Object creation
+- [x] Prototypal inheritance
+  - [x] get not set
+  - [x] short-circuiting
+  - [x] property access using short-circuiting
+  - [x] conditional access operator
+- [x] Arrays are also objects
+- [ ] Functions are also objects

@@ -1,81 +1,28 @@
-let a = 10;
-let b = 10.6;
-let bi = 10987890910n;
-let c = "cpts489";
-let d = false;
-let e = null;
-//let f;
-let g = Symbol("eecs");
-
-//console.log(g);
-
-let o = {
-  name: "Tim",
-  dept: "eecs",
-  awards: null,
-};
-
-console.log(o.honors);
-
-let arr = [1, 2, 3];
-
-// console.log(o);
-// console.log(arr);
-
-// function add(x, y) {
-//   return x + y;
-// }
-
-let add = function (x, y) {
-  return x + y;
-};
-
-let num = {
-  x: 2,
-  y: 3,
-  print: function () {
-    console.log(this.x, this.y);
+let user = {
+  name: "subu",
+  address: {
+    street: "2020 drive",
+    city: "pullman",
   },
 };
 
-function add_object(o) {
-  o.x = 20;
-  return o.x + o.y;
+let x = [1, 2, 3];
+x.name = "subu";
+
+for (y in x) {
+  console.log(y, "==>", x[y]);
 }
 
-//console.log(add_object(num));
+// let o1 = Object.create(Object.prototype);
+// Object.defineProperty(o1, "val", {
+//     value: 20,
 
-console.log(num);
+// });
+//console.log(o.toString());
 
-let n1 = 1;
-let n2 = 2;
+// let o2 = Object.create(o);
+// o2.val1 = 30;
+// o2.val = 25;
+//console.log(o2.val);
 
-function add_primitive(x, y) {
-  return x + y;
-}
-console.log(add_primitive(n1, n2));
-
-("Subu");
-let s = new String("Subu");
-console.log(s.toUpperCase());
-
-const numObj = 12345.6789;
-
-numObj.toFixed(); // '12346'; rounding, no fractional part
-numObj.toFixed(1);
-
-add(1,2)
-
-console.log(numObj.toFixed(1));
-
-console.log((x = 10 + 15));
-
-let n = 10
-
-if (n < 5) {
-  n = 0
-} else {
-  n = 100
-}
-
-
+//console.log(user.office.zip);
