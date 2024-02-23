@@ -1,16 +1,50 @@
-let user = {
-  name: "subu",
-  address: {
-    street: "2020 drive",
-    city: "pullman",
-  },
+function add(x, y) {
+  console.log(this);
+  return x + y;
+}
+
+// console.log(add(1, 2));
+
+// console.log(add.call(global, 1, 2));
+
+function Student(name, major) {
+  this.name = name;
+  this.major = major;
+}
+Student.prototype.printDetails = function () {
+  console.log(this.name, ":", this.major);
 };
 
-let x = [1, 2, 3];
-x.name = "subu";
+const stud1 = new Student("vishal", "cs");
+const stud2 = new Student("diana", "cs");
+const stud3 = new Student("emma", "cs");
+// const stud1 = {
+//   name: "vishal",
+//   major: "CS",
+//   printDetails: function () {
+//     console.log(this.name, ":", this.major);
+//   },
+// };
 
-for (y in x) {
-  console.log(y, "==>", x[y]);
+// const stud2 = {
+//   name: "Diana",
+//   major: "CS",
+//   printDetails: function () {
+//     console.log(this.name, ":", this.major);
+//   },
+// };
+
+// const stud3 = {
+//   name: "Emma",
+//   major: "CS",
+//   printDetails: function () {
+//     console.log(this.name, ":", this.major);
+//   },
+// };
+
+const students = [stud1, stud2, stud3];
+for (s of students) {
+  s.printDetails();
 }
 
 // let o1 = Object.create(Object.prototype);
