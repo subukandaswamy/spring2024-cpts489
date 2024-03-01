@@ -1,62 +1,95 @@
+// // function Student(name) {
+// //   this.name = name;
+// // }
+
+// // Student.prototype.printDetails = function () {
+// //   console.log(this.name);
+// //   return 1;
+// // };
+
+// // function GradStudent(name, thesis) {
+// //   Student.call(this, name);
+// //   this.thesis = thesis;
+// // }
+
+// // let g = new GradStudent("subu", "abc");
+
+// // GradStudent.prototype = Student.prototype;
+
+// // let g1 = new GradStudent("john", "abc");
+
+// function ho_function() {
+//   return function (x, y) {
+//     return x + y;
+//   };
+// }
+
+// let c = 20
+
+// function inc(x) {
+//   const incVal = 1;
+//   return x + incVal + c;
+// }
+
+// function incByVal() {
+//   const val = 1;
+//   return function (x) {
+//     return x + val;
+//   };
+// }
+
+// const fun = incByVal();
+
+// console.log(fun(10));
+
+// console.log("loaded index");
+
+//const util = require_util();
+
+//const { getval, setval } = require("./util");
+
+//util1.setVal(67);
+
+// import ValClass, { setVal, getVal } from "./util.js";
+
+// let vc = new ValClass(35);
+
+// console.log(vc);
+
+// setVal(vc, 25);
+
+// console.log(getVal(vc));
+
+// console.log(vc);
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// objective
+// 1. filter all od numbers out
+// 2. square the remaining numbers
+// 3. sum them up
+
+function isEven(x) {
+  return x % 2 == 0;
+}
+
+let arr1 = arr.filter(isEven);
+
+console.log(arr1);
+
+function sqr(x) {
+  return Math.pow(x, 2);
+}
+
+let arr2 = arr1.map(sqr);
+
+console.log(arr2);
+
 function add(x, y) {
-  console.log(this);
+  console.log("x: ", x, " y: ", y);
   return x + y;
 }
 
-// console.log(add(1, 2));
+let sum_result = arr2.reduce(add, []);
 
-// console.log(add.call(global, 1, 2));
-
-function Student(name, major) {
-  this.name = name;
-  this.major = major;
-}
-Student.prototype.printDetails = function () {
-  console.log(this.name, ":", this.major);
-};
-
-const stud1 = new Student("vishal", "cs");
-const stud2 = new Student("diana", "cs");
-const stud3 = new Student("emma", "cs");
-// const stud1 = {
-//   name: "vishal",
-//   major: "CS",
-//   printDetails: function () {
-//     console.log(this.name, ":", this.major);
-//   },
-// };
-
-// const stud2 = {
-//   name: "Diana",
-//   major: "CS",
-//   printDetails: function () {
-//     console.log(this.name, ":", this.major);
-//   },
-// };
-
-// const stud3 = {
-//   name: "Emma",
-//   major: "CS",
-//   printDetails: function () {
-//     console.log(this.name, ":", this.major);
-//   },
-// };
-
-const students = [stud1, stud2, stud3];
-for (s of students) {
-  s.printDetails();
-}
-
-// let o1 = Object.create(Object.prototype);
-// Object.defineProperty(o1, "val", {
-//     value: 20,
-
-// });
-//console.log(o.toString());
-
-// let o2 = Object.create(o);
-// o2.val1 = 30;
-// o2.val = 25;
-//console.log(o2.val);
-
-//console.log(user.office.zip);
+console.log(sum_result);
